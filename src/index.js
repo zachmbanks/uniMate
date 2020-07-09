@@ -1,13 +1,8 @@
 import "./styles.css";
 import "./components";
 
-import { create, all } from "mathjs";
+import "fraction.js";
 import { lableMaker, inputMaker, brMaker } from "./components";
-
-const config = {
-  number: "Fraction"
-};
-const math = create(all, config);
 
 // This creates an array of variables using the Array() constructor and the fill()
 let [roWidth, roHeight, outsideFrameWidth, outsideFrameHeight, shimGap] = Array(
@@ -39,7 +34,7 @@ document.querySelector("#roSubmitBtn").addEventListener("click", function() {
 });
 
 function calculate() {
-  shimGap = math.fraction("3/8");
+  shimGap = 0.25;
   outsideFrameWidth = roWidth - shimGap * 2;
   document.querySelector("#display").innerHTML = outsideFrameWidth;
   console.log(outsideFrameWidth);
