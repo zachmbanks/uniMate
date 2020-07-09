@@ -1,6 +1,8 @@
 import "./styles.css";
+import "./components";
 
 import { create, all } from "mathjs";
+import { lableMaker, inputMaker, brMaker } from "./components";
 
 const config = {
   number: "Fraction"
@@ -13,10 +15,10 @@ let [roWidth, roHeight, outsideFrameWidth, outsideFrameHeight, shimGap] = Array(
 ).fill(0);
 
 document.querySelector("body").innerHTML = `
-<label for="">Rough Opening Width</label>
-<br>
-<input id="roWidth" type="text" name="" value="${roWidth}">
-<br>
+${lableMaker("Rough Opning Width", "rough-opening-width", "")}
+${brMaker()}
+${inputMaker("roWidth", "", roWidth)}
+${brMaker()}
 <label for="">Rough Opening Width</label>
 <br>
 <input id="roHeight" type="text" name="" value="${roHeight}">
