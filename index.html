@@ -6,13 +6,20 @@
   </head>
 
   <body>
-    <label for="shim-gap">Select</label>
+    <label for="shim-gap">Select Caulk Joint</label>
     <select id="shim-gap" name="shim-gap">
       <option value=".25">1/4"</option>
       <option value=".375">3/8"</option>
     </select>
-    <input type="text" name="" id="roWidth" />
-    <input type="text" name="" id="roHeight" />
+    <br />
+    <label for="ro-width">Rough Opening Width</label>
+    <br />
+    <input type="text" name="ro-width" id="roWidth" />
+    <br />
+    <label for="ro-height">Rough Opening Height</label>
+    <br />
+    <input type="text" name="ro-height" id="roHeight" />
+    <br />
     <button id="roSubmitBtn" type="submit">submit</button>
     <p id="display"></p>
     <script src="src/index.js"></script>

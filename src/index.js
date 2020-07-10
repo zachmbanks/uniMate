@@ -35,7 +35,15 @@ function nerestUsableFraction(decimalNumber, denominator) {
   let numeratorReduced = numeratorNotReduced / denominator;
   let final = new Fraction(numeratorReduced / denominator);
   console.log(final.toFraction());
+  let wholeNumberReduce = final.n / final.d;
+  console.log(wholeNumberReduce);
+  let dec = wholeNumberReduce % 1;
+  let int = Math.floor(wholeNumberReduce);
+  let lastFrac = new Fraction(dec).toFraction();
+  console.log(lastFrac);
+  let lastNumber = int + " " + lastFrac;
+  console.log(lastNumber);
+  //
 }
 
-nerestUsableFraction(0.616, 16);
-console.log(shimGap);
+nerestUsableFraction(52, 16);
