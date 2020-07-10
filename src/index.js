@@ -15,16 +15,15 @@ document.querySelector("#roSubmitBtn").addEventListener("click", function() {
 function calculateFrameWidth() {
   let shimGapSelct = document.querySelector("#shim-gap");
   shimGap = shimGapSelct.options[shimGapSelct.selectedIndex].value;
-  let oFrameWidthFraction = Fraction(
-    (outsideFrameWidth = roWidth - shimGap * 2)
-  ).toFraction(true);
-  let oFrameHeightFraction = Fraction(
-    (outsideFrameHeight = roHeight - shimGap)
-  ).toFraction(true);
+  let outsideFrameWidth = roWidth - shimGap * 2;
+  let outsideFrameHeight = roHeight - shimGap;
   // let oFrameWidthFraction = new Fraction(outsideFrameWidth)
   document.querySelector(
     "#display"
-  ).innerHTML = `The oustside Frame dimentions are ${oFrameWidthFraction} x ${oFrameHeightFraction}`;
+  ).innerHTML = `The oustside Frame dimentions are ${nerestUsableFraction(
+    outsideFrameWidth,
+    16
+  )} x ${nerestUsableFraction(outsideFrameHeight, 16)}`;
 }
 
 function nerestUsableFraction(decimalNumber, denominator) {
@@ -43,7 +42,6 @@ function nerestUsableFraction(decimalNumber, denominator) {
   console.log(lastFrac);
   let lastNumber = int + " " + lastFrac;
   console.log(lastNumber);
+  return lastNumber;
   //
 }
-
-nerestUsableFraction(52, 16);
