@@ -1,13 +1,6 @@
 import "./styles.css";
 
-import { create, all } from "mathjs";
-
-const config = {
-  number: "Fraction"
-};
-const math = create(all, config);
-
-let lable, input, br;
+let lable, input, br, button, paragraph, select;
 
 export function lableMaker(lableContents, idQuery, classQuery) {
   lable = `<label class="${classQuery}" id="${idQuery}" for="">${lableContents}</label>`;
@@ -22,4 +15,14 @@ export function inputMaker(idQuery, classQuery, valueQuery) {
 export function brMaker() {
   br = `<br>`;
   return br;
+}
+
+export function buttonMaker(idQuery, buttonLable) {
+  button = `<button id="${idQuery}" type="submit">${buttonLable}</button>`;
+  return button;
+}
+
+export function paragraphMaker(idQuery, classQuery) {
+  paragraph = `<p id="${idQuery}" class="${classQuery}"></p>`;
+  return paragraph;
 }
