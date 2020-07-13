@@ -1,3 +1,15 @@
-body {
-  font-family: sans-serif;
+.icon {
+  border-radius: 8px;
+  width: 30px;
+}
+
+.ro-inputs {
+    text-align: center;
+    padding-top: 30px;
+
+}
+
+.ro-button{
+    padding-top: 15px;
+    text-align: center;
 }

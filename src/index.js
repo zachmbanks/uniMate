@@ -6,17 +6,19 @@ let [roWidth, roHeight, outsideFrameWidth, outsideFrameHeight, shimGap] = Array(
   5
 ).fill(0);
 
-document.querySelector("#roSubmitBtn").addEventListener("click", function() {
-  roWidth = Fraction(document.querySelector("#roWidth").value);
-  roHeight = Fraction(document.querySelector("#roHeight").value);
-  calculateFrameWidth();
-});
+document
+  .querySelector("#ro-submit-button")
+  .addEventListener("click", function() {
+    roWidth = Fraction(document.querySelector("#roWidth").value);
+    roHeight = Fraction(document.querySelector("#roHeight").value);
+    calculateFrameWidth();
+  });
 
 function calculateFrameWidth() {
   let shimGapSelct = document.querySelector("#shim-gap");
   shimGap = shimGapSelct.options[shimGapSelct.selectedIndex].value;
-  let outsideFrameWidth = roWidth - shimGap * 2;
-  let outsideFrameHeight = roHeight - shimGap;
+  outsideFrameWidth = roWidth - shimGap * 2;
+  outsideFrameHeight = roHeight - shimGap;
   // let oFrameWidthFraction = new Fraction(outsideFrameWidth)
   document.querySelector(
     "#display"
@@ -45,3 +47,7 @@ function nerestUsableFraction(decimalNumber, denominator) {
   return lastNumber;
   //
 }
+
+document.querySelector("#butt").addEventListener("clic", function() {
+  console.log("Works");
+});

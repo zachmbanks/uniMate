@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "fraction.js": "4.0.12",
-    "mathjs": "7.0.2"
+    "mathjs": "7.0.2",
+    "onsenui": "2.10.10"
   },
   "devDependencies": {
     "@babel/core": "7.2.0",
