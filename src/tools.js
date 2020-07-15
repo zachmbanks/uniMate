@@ -4,17 +4,7 @@ let [roWidth, roHeight, outsideFrameWidth, outsideFrameHeight, shimGap] = Array(
   5
 ).fill(0);
 
-////////////////////////////////////////////////////////////////////
-
-document.querySelector("#ro-submit").addEventListener("click", function() {
-  roWidth = Fraction(document.querySelector("#roWidth").value);
-  roHeight = Fraction(document.querySelector("#roHeight").value);
-  calculateFrameWidth();
-  console.log("works");
-});
-
-////////////////////////////////////////////////////////////////
-function calculateFrameWidth() {
+export function calculateFrameWidth() {
   let shimGapSelct = document.querySelector("#shim-gap");
   shimGap = shimGapSelct.options[shimGapSelct.selectedIndex].value;
   outsideFrameWidth = roWidth - shimGap * 2;
@@ -28,7 +18,7 @@ function calculateFrameWidth() {
   )} x ${nerestUsableFraction(outsideFrameHeight, 16)}`;
 }
 
-function nerestUsableFraction(decimalNumber, denominator) {
+export function nerestUsableFraction(decimalNumber, denominator) {
   let sixteenth = new Fraction(1 / denominator);
   let x = Math.round(decimalNumber * sixteenth.d);
   let newFrac = new Fraction(x / sixteenth);

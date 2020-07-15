@@ -4,115 +4,44 @@
     <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="/src/styles.css" />
-    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
-    <link
-      rel="stylesheet"
-      href="http://code.ionicframework.com/1.3.3/fonts/ionicons.svg"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
-    />
-    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
   </head>
-
-  <!-- 
-
   <body>
+    <!-----------------Frame calculator------------------------>
+    <label for="shim-gap">Select Caulk Joint</label>
+    <select id="shim-gap" name="shim-gap">
+      <option value=".25">1/4"</option>
+      <option value=".375">3/8"</option>
+    </select>
+    <br />
+    <label for="ro-width">Rough Opening Width</label>
+    <br />
+    <input type="text" name="ro-width" id="roWidth" />
+    <br />
+    <label for="ro-height">Rough Opening Height</label>
+    <br />
+    <input type="text" name="ro-height" id="roHeight" />
+    <br />
+    <button id="ro-submit" type="submit">submit</button>
+    <p id="display"></p>
+    <br />
 
-    <ons-navigator>
-      <ons-page> (root page)
-    </ons-navigator>
-
-    <template>
-      <ons-page></ons-page>
-    </template>
-
-  </body>
-
- -->
-
-  <body>
-    <ons-navigator id="nav-main">
-      <ons-page>
-        <ons-toolbar class="navigation-bar">
-          <div class="center">Home</div>
-          <div class="right navigation-bar">
-            <ons-button modifier="quiet" onclick="navEl.pushPage('page2')"
-              ><img
-                class="icon"
-                src="reorder-four-outline.svg"
-                alt=""
-                sizes=""
-                srcset=""
-            /></ons-button>
-          </div>
-        </ons-toolbar>
-        <div class="ro-inputs">
-          <ons-input
-            id="ro-width"
-            placeholder="Enter Rough Opening Width"
-            float
-          ></ons-input>
-          <br />
-          <ons-input
-            id="ro-height"
-            placeholder="Enter Rough Opening Height"
-            float
-          ></ons-input>
-        </div>
-        <div class="ro-button">
-          <ons-button id="ro-submit-button" modifier="outline"
-            >Submit Rough Opening</ons-button
-          >
-          <button id="butt">test</button>
-          <p id="display"></p>
-        </div>
-
-        <script>
-          ons.getScriptPage().onInit = function() {
-            console.log("Home!");
-          };
-        </script>
-      </ons-page>
-    </ons-navigator>
-
-    <template id="page2">
-      <ons-page>
-        <ons-toolbar>
-          <div class="left"><ons-back-button>Home</ons-back-button></div>
-          <div class="center">Page 2</div>
-        </ons-toolbar>
-
-        <script>
-          ons.getScriptPage().onInit = function() {
-            console.log("Page 2!");
-          };
-        </script>
-      </ons-page>
-    </template>
-
-    <script>
-      const navEl = (window.navEl = document.querySelector("ons-navigator"));
-    </script>
+    <!----------------------------------->
+    <label for="jamb-width">Door Jamb Width</label>
+    <select id="jamb-width" name="jamb-width">
+      <option value="1.375">1 3/4"</option>
+      <option value="2">2"</option>
+    </select>
+    <br />
+    <label for="outside-frame-width">Outside Frame Width</label>
+    <br />
+    <input type="text" name="outside-frame-width" id="outside-frame-width" />
+    <br />
+    <label for="outside-frame-height">Rough Opening Height</label>
+    <br />
+    <input type="text" name="outside-frame-height" id="outside-frame-height" />
+    <br />
+    <button id="outside-frame-submit" type="submit">submit</button>
+    <p id="display"></p>
     <script src="src/index.js"></script>
   </body>
 </html>
-
-<!-- <label for="shim-gap">Select Caulk Joint</label>
-<select id="shim-gap" name="shim-gap">
-  <option value=".25">1/4"</option>
-  <option value=".375">3/8"</option>
-</select>
-<br />
-<label for="ro-width">Rough Opening Width</label>
-<br />
-<input type="text" name="ro-width" id="roWidth" />
-<br />
-<label for="ro-height">Rough Opening Height</label>
-<br />
-<input type="text" name="ro-height" id="roHeight" />
-<br />
-<button id="roSubmitBtn" type="submit">submit</button>
-<p id="display"></p>
-<script src="src/index.js"></script> -->
